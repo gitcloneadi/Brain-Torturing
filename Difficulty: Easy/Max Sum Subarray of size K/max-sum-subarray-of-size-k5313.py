@@ -4,9 +4,14 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def maximumSumSubarray(self, k, arr):
+        n = len(arr)
+        curr_sum = sum(arr[:k])
+        max_sum = curr_sum
+        for i in range(k, n):
+            curr_sum += arr[i] - arr[i - k]
+            max_sum = max(max_sum, curr_sum)
+        return max_sum
 
 if __name__ == "__main__":
     # Add your test cases here
