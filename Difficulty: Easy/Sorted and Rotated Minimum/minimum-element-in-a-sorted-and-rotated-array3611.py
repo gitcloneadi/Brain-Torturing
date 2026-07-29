@@ -4,9 +4,15 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def findMin(self, arr):
+        low, high = 0, len(arr) - 1
+        while low < high:
+            mid = (low + high) // 2
+            if arr[mid] > arr[high]:
+                low = mid + 1
+            else:
+                high = mid
+        return arr[low]
 
 if __name__ == "__main__":
     # Add your test cases here
