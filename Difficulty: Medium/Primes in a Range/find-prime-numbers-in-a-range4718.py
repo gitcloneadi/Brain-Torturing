@@ -4,9 +4,16 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def primeRange(self, M, N):
+        if N < 2:
+            return []
+        sieve = [True] * (N + 1)
+        sieve[0] = sieve[1] = False
+        for i in range(2, int(N**0.5) + 1):
+            if sieve[i]:
+                for j in range(i * i, N + 1, i):
+                    sieve[j] = False
+        return [i for i in range(max(2, M), N + 1) if sieve[i]]
 
 if __name__ == "__main__":
     # Add your test cases here
