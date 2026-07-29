@@ -4,9 +4,18 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def majorityElement(self, arr):
+        cand, count = None, 0
+        for x in arr:
+            if count == 0:
+                cand, count = x, 1
+            elif x == cand:
+                count += 1
+            else:
+                count -= 1
+        if arr.count(cand) > len(arr) // 2:
+            return cand
+        return -1
 
 if __name__ == "__main__":
     # Add your test cases here
