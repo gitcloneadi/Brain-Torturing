@@ -4,9 +4,10 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def reverseWords(self, s):
+        sep = '.' if '.' in s else ' '
+        words = [w for w in s.split(sep) if w]
+        return sep.join(words[::-1])
 
 if __name__ == "__main__":
     # Add your test cases here
