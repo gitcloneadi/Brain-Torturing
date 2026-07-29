@@ -3,10 +3,11 @@
 # Difficulty Level : Difficulty: Basic
 """
 
+import re
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def extractMaximum(self, s):
+        nums = [int(x) for x in re.findall(r'\d+', s)]
+        return max(nums) if nums else -1
 
 if __name__ == "__main__":
     # Add your test cases here
