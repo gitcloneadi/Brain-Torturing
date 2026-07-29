@@ -4,9 +4,8 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def multiplyStrings(self, s1, s2):
+        return str(int(s1) * int(s2))
 
 if __name__ == "__main__":
     # Add your test cases here
