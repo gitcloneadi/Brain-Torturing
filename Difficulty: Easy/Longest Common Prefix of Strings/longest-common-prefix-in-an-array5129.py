@@ -4,9 +4,16 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def longestCommonPrefix(self, arr):
+        if not arr:
+            return "-1"
+        arr.sort()
+        first, last = arr[0], arr[-1]
+        i = 0
+        while i < len(first) and i < len(last) and first[i] == last[i]:
+            i += 1
+        res = first[:i]
+        return res if res else "-1"
 
 if __name__ == "__main__":
     # Add your test cases here
