@@ -3,10 +3,21 @@
 # Difficulty Level : Difficulty: Medium
 """
 
+from collections import deque
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def levelOrder(self, root):
+        res = []
+        if not root:
+            return res
+        q = deque([root])
+        while q:
+            node = q.popleft()
+            res.append(node.data)
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+        return res
 
 if __name__ == "__main__":
     # Add your test cases here
