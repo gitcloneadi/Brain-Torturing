@@ -4,9 +4,13 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def rotateby90(self, mat):
+        n = len(mat)
+        for i in range(n):
+            for j in range(i + 1, n):
+                mat[i][j], mat[j][i] = mat[j][i], mat[i][j]
+        for i in range(n // 2):
+            mat[i], mat[n - 1 - i] = mat[n - 1 - i], mat[i]
 
 if __name__ == "__main__":
     # Add your test cases here
