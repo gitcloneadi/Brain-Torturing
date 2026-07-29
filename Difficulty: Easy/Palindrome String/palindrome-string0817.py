@@ -4,9 +4,8 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def isPalindrome(self, s):
+        return 1 if s == s[::-1] else 0
 
 if __name__ == "__main__":
     # Add your test cases here
