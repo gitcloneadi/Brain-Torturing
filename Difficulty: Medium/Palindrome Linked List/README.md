@@ -1,0 +1,45 @@
+# [Palindrome Linked List](https://www.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/0)
+Difficulty Level : Difficulty: Medium
+
+You are given the 
+head
+ of a singly linked list of positive integers. You have to check if the given linked list is 
+palindrome 
+or not.
+
+
+Examples:
+
+
+Input:
+   
+
+
+Output: 
+true
+
+Explanation: 
+The given linked list is 1 -> 2 -> 1 -> 1 -> 2 -> 1, which is a palindrome.
+
+
+
+
+Input:
+   
+
+
+Output: 
+false
+
+Explanation: 
+The given linked list is 10 -> 20 -> 30 -> 40 -> 50, which is not a palindrome.
+
+
+Constraints:
+1 ≤ number of nodes ≤ 10
+5
+0 ≤ node->data ≤ 10
+3
+
+Company Tags :Accolite Amazon Microsoft Snapdeal MakeMyTrip Adobe Yodlee Infotech KLA Tencor Kritikal Solutions NPCI
+Topic Tags :Linked List palindrome
