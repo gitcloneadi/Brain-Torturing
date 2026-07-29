@@ -4,9 +4,8 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def PowMod(self, x, n, m):
+        return pow(x, n, m)
 
 if __name__ == "__main__":
     # Add your test cases here
