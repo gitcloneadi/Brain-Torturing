@@ -4,9 +4,13 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def isPalindrome(self, head):
+        vals = []
+        curr = head
+        while curr:
+            vals.append(curr.data)
+            curr = curr.next
+        return vals == vals[::-1]
 
 if __name__ == "__main__":
     # Add your test cases here
