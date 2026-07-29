@@ -4,9 +4,9 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def missingNumber(self, arr):
+        n = len(arr) + 1
+        return n * (n + 1) // 2 - sum(arr)
 
 if __name__ == "__main__":
     # Add your test cases here
