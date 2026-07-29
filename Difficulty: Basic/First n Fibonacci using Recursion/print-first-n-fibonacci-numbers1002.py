@@ -4,9 +4,11 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def fibonacciNumbers(self, n):
+        res = [0, 1]
+        for _ in range(2, n):
+            res.append(res[-1] + res[-2])
+        return res[:n]
 
 if __name__ == "__main__":
     # Add your test cases here
