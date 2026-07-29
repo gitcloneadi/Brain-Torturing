@@ -4,9 +4,14 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def isRotated(self, s1, s2):
+        if len(s1) != len(s2):
+            return False
+        if len(s1) <= 2:
+            return s1 == s2
+        left_rot = s1[2:] + s1[:2]
+        right_rot = s1[-2:] + s1[:-2]
+        return s2 == left_rot or s2 == right_rot
 
 if __name__ == "__main__":
     # Add your test cases here
