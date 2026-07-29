@@ -4,9 +4,13 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def maxSubArraySum(self, arr):
+        max_so_far = arr[0]
+        curr_max = arr[0]
+        for x in arr[1:]:
+            curr_max = max(x, curr_max + x)
+            max_so_far = max(max_so_far, curr_max)
+        return max_so_far
 
 if __name__ == "__main__":
     # Add your test cases here
