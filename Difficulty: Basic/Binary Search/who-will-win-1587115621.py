@@ -4,9 +4,17 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def binarysearch(self, arr, k):
+        low, high = 0, len(arr) - 1
+        while low <= high:
+            mid = (low + high) // 2
+            if arr[mid] == k:
+                return mid
+            elif arr[mid] < k:
+                low = mid + 1
+            else:
+                high = mid - 1
+        return -1
 
 if __name__ == "__main__":
     # Add your test cases here
