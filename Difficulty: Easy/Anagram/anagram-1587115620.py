@@ -3,10 +3,10 @@
 # Difficulty Level : Difficulty: Easy
 """
 
+from collections import Counter
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def areAnagrams(self, s1, s2):
+        return Counter(s1) == Counter(s2)
 
 if __name__ == "__main__":
     # Add your test cases here
