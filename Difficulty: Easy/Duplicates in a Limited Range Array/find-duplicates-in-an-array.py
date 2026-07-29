@@ -4,9 +4,14 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def duplicates(self, arr):
+        seen = set()
+        dups = set()
+        for x in arr:
+            if x in seen:
+                dups.add(x)
+            seen.add(x)
+        return sorted(list(dups)) if dups else [-1]
 
 if __name__ == "__main__":
     # Add your test cases here
