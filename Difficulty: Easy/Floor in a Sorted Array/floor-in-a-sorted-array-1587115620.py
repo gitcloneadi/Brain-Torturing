@@ -4,9 +4,17 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def findFloor(self, arr, k):
+        low, high = 0, len(arr) - 1
+        ans = -1
+        while low <= high:
+            mid = (low + high) // 2
+            if arr[mid] <= k:
+                ans = mid
+                low = mid + 1
+            else:
+                high = mid - 1
+        return ans
 
 if __name__ == "__main__":
     # Add your test cases here
