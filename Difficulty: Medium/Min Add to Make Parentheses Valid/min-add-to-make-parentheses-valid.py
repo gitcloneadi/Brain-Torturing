@@ -4,9 +4,16 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def minParentheses(self, s):
+        open_cnt = close_cnt = 0
+        for ch in s:
+            if ch == '(':
+                open_cnt += 1
+            elif open_cnt > 0:
+                open_cnt -= 1
+            else:
+                close_cnt += 1
+        return open_cnt + close_cnt
 
 if __name__ == "__main__":
     # Add your test cases here
