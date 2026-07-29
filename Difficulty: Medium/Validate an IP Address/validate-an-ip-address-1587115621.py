@@ -4,9 +4,14 @@
 """
 
 class Solution:
-    def solve(self):
-        # TODO: Paste your accepted GeeksforGeeks solution here
-        pass
+    def isValid(self, str):
+        parts = str.split('.')
+        if len(parts) != 4:
+            return False
+        for p in parts:
+            if not p.isdigit() or (len(p) > 1 and p[0] == '0') or not (0 <= int(p) <= 255):
+                return False
+        return True
 
 if __name__ == "__main__":
     # Add your test cases here
