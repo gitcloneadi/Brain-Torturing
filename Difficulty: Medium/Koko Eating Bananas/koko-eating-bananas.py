@@ -14,7 +14,7 @@ class Solution:
         res = high
         while low <= high:
             mid = low + (high-low)//2
-            if self.check(arr, mid, k) == True:
+            if self.check(arr, mid, k):
                 high = mid - 1
                 res = mid
             else:
